@@ -37,6 +37,15 @@
   - adjust recharts: **1 hour**
 - Logic (API + data process): **2 hour**
 
+
+## Reference
+- [Vite Env Secret setup](https://vitejs.cn/vite3-cn/guide/env-and-mode.html#modes)
+- [RESAS API](https://opendata.resas-portal.go.jp/docs/api/v1/index.html)
+- [Vercel Environment Variables](https://vercel.com/docs/projects/environment-variables)
+- [recharts GitHub repository](https://github.com/recharts/recharts)
+- [tailwindcss](https://www.tailwindcss.cn/docs/installation/using-postcss)
+- [vite create project](https://vitejs.cn/vite3-cn/guide/#scaffolding-your-first-vite-project)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
