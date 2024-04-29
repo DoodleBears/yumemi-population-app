@@ -1,3 +1,42 @@
+# 取り組み説明
+## [Video Demos](https://drive.google.com/drive/folders/19oRZD7ZIvvf1xyQAok4iJpH_dGu3vAQR?usp=drive_link)
+
+## 概要
+- Git branching rule
+   - Issue with corresponding feature branch (or "..." branch)
+- Commit rule
+  - atomic commit (as small as possible)
+  - feature based (new feature)
+  - file based (small fix)
+  - message follow template: `tag(range): message`
+- Issue description includes
+  - prototype design image
+  - todo (check list for key implementation)
+  - reference for execute and development
+- Pull request description includes
+  - related issue
+  - what have been done
+  - video demo (if needed)
+- Dependency
+  - `axios` for network request
+  - `recharts` for render chart
+  - `vite` for packing
+
+## Folder Structure
+- `pages/`: for View (UI)
+- `state/`: for state management
+- `components/`: for reuseable component
+
+## About AI Service
+- 85% ~ code is written by `Cursor` (w/gpt-4-turbo-2024-04-09 and claude-3-opus-20240229)
+- ChatGPT (GPT-4) also be used in project initialization
+
+## Time Spent (**3.5 hours**)
+
+- View (UI): **1.5 hour**
+  - adjust recharts: **1 hour**
+- Logic (API + data process): **2 hour**
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
