@@ -8,6 +8,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 
 const API_KEY = import.meta.env.VITE_RESAS_API_KEY;
@@ -216,30 +217,39 @@ const PopulationPage: React.FC = () => {
       <h1>都道府県別人口推移</h1>
       <div>
         <h2>都道府県選択</h2>
-        {prefectures.map((prefecture) => (
-          <label key={prefecture.prefCode}>
-            <input
-              type="checkbox"
-              checked={selectedPrefectures.includes(prefecture.prefCode)}
-              onChange={() => handlePrefectureChange(prefecture.prefCode)}
-            />
-            {prefecture.prefName}
-          </label>
-        ))}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+        >
+          {prefectures.map((prefecture) => (
+            <label key={prefecture.prefCode} style={{ margin: "0.35rem" }}>
+              <input
+                type="checkbox"
+                checked={selectedPrefectures.includes(prefecture.prefCode)}
+                onChange={() => handlePrefectureChange(prefecture.prefCode)}
+              />
+              {prefecture.prefName}
+            </label>
+          ))}
+        </div>
       </div>
       <div>
         <h2>人口構成グラフ</h2>
         <select
           value={populationType}
           onChange={(e) => setPopulationType(e.target.value)}
+          style={{ margin: "1rem 0", fontSize: "1.2rem" }}
         >
           <option value="総人口">総人口</option>
           <option value="年少人口">年少人口</option>
           <option value="生産年齢人口">生産年齢人口</option>
           <option value="老年人口">老年人口</option>
         </select>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          {renderLineChart()}
+        <div style={{ width: "100%", height: "450px" }}>
+          <ResponsiveContainer>{renderLineChart()}</ResponsiveContainer>
         </div>
       </div>
     </div>
